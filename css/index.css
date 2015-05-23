@@ -1,0 +1,120 @@
+/*
+ * �I�������Ȃ�
+ */
+* {
+  -moz-user-select: none;
+}
+
+html,
+body,
+#whiteout,
+#contents,
+#card-flash1,
+#card-flash2,
+#bg
+{
+    height:100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#contents{
+    position: relative;
+    overflow: hidden;
+}
+
+#whiteout,
+#card_back,
+#card_front,
+#card-flash1,
+#card-flash2,
+#port,
+#logo,
+#log,
+#bg
+{
+    position: absolute;
+}
+
+#card_back,
+#card_front,
+#card-flash1,
+#card-flash2,
+#bg{
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#card_back,
+#card_front{
+    background-size:100% 100%;
+}
+
+#card-flash1,
+#card-flash2,
+#bg{
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+#bg{
+    z-index: 1;
+    background-image: url(images/bg.jpg);
+    background-color: #464646;
+}
+
+#port{
+    z-index: 2;
+    color: #ffffff;
+    left: 40;
+    bottom: 40;
+}
+
+#logo{
+    z-index: 4;
+    background-image: url(images/logo.png);
+    width: 339px;
+    height: 74px;
+    right: 40;
+    bottom: 40;
+}
+
+#gauge{
+    width: 600px;
+    height: 0px;
+    bottom: 0;
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+
+#card_front{
+
+    z-index: 8;
+    width: 600px;
+    height: 800px;
+
+}
+
+#whiteout{
+    z-index: 9;
+    background-color: #ffffff;
+    opacity: 0;
+}
+
+.power-num{
+    z-index: 10;
+    position: absolute;
+    color: #ffffff;
+    font-size: 400px;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+}
+
+#statusButton{
+    width: 100%;
+    height: 100px;
+}
