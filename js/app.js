@@ -1,9 +1,7 @@
-//var server = new GetServer();
-
 var server = null;
 var port = 80;
 var appRoot = './public';
-var status = true;
+var status = true;;
 
 function init() {
     console.log("load start");
@@ -24,16 +22,21 @@ function init() {
 
     document.getElementById("port").innerHTML=msg;
 
-    var statusButton = document.getElementById("statusButton");
+    //status = new WasherStatus();
 
-    statusButton.innerHTML="status ON";
+    var statusButton = document.getElementById("status-button");
+
+    statusButton.innerHTML="status OK";
     statusButton.addEventListener("click", function (e) {
-        if(status) {
-            this.innerHTML="status OFF";
-            status = false;
-        } else {
-            this.innerHTML="status ON";
+        console.log("click start");
+        console.log("status:" + status);
+
+        if(status == null) {
+            this.innerHTML="status OK";
             status = true;
+        } else {
+            this.innerHTML="status NG";
+            status = null;
         }
     } , false );
 
