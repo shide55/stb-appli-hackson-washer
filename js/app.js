@@ -31,7 +31,7 @@ function init() {
         console.log("click start");
         console.log("status:" + status);
 
-        if(status == null) {
+        if (status == "null") {
             this.innerHTML="status OK";
             status = true;
         } else {
