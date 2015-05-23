@@ -10,7 +10,7 @@ function init() {
     server.get("/", appRoot);
     server.get("/xhr", function xhrres(req, res, oncomplete) {
         console.log(req);
-        var ret = status ? 'あたり' : 'はずれ';
+        var ret = status == "null" ? 'NG' : 'OK';
         res.write(ret); // not send?
         oncomplete();
     });
