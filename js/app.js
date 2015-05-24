@@ -26,23 +26,15 @@ function init() {
 
     document.getElementById("port").innerHTML=msg;
 
-    //status = new WasherStatus();
-
     var statusButton = document.getElementById("status-button");
 
-    //statusButton.innerHTML="status OK";
     statusButton.style.backgroundImage = "url(" + statusDefualtImage +")";
 
     statusButton.addEventListener("click", function (e) {
-        console.log("click start");
-        console.log("status:" + status);
-
         if (status == "null") {
-            //this.innerHTML="status OK";
             statusButton.style.backgroundImage = "url(" + statusDefualtImage +")";
             status = true;
         } else {
-            //this.innerHTML="status NG";
             statusButton.style.backgroundImage = "url(" + statusAlertImage +")";
             status = null;
         }
