@@ -2,10 +2,10 @@ var server = null;
 var port = 80;
 var appRoot = './public';
 var status = true;
-var statusDefualtImage = './img/pod_default.jpg';
-var statusAlertImage = './img/pod_alert.jpg';
-//var statusDefualtImage = './img/laundry_default.jpg';
-//var statusAlertImage = './img/laundry_alert.jpg';
+//var statusDefualtImage = './img/pod_default.jpg';
+//var statusAlertImage = './img/pod_alert.jpg';
+var statusDefualtImage = './img/laundry_default.jpg';
+var statusAlertImage = './img/laundry_alert.jpg';
 
 function init() {
     console.log("load start");
