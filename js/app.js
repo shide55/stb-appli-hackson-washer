@@ -1,7 +1,11 @@
 var server = null;
 var port = 80;
 var appRoot = './public';
-var status = true;;
+var status = true;
+var statusDefualtImage = './img/pod_default.jpg';
+var statusAlertImage = './img/pod_alert.jpg';
+//var statusDefualtImage = './img/laundry_default.jpg';
+//var statusAlertImage = './img/laundry_alert.jpg';
 
 function init() {
     console.log("load start");
@@ -26,16 +30,20 @@ function init() {
 
     var statusButton = document.getElementById("status-button");
 
-    statusButton.innerHTML="status OK";
+    //statusButton.innerHTML="status OK";
+    statusButton.style.backgroundImage = "url(" + statusDefualtImage +")";
+
     statusButton.addEventListener("click", function (e) {
         console.log("click start");
         console.log("status:" + status);
 
         if (status == "null") {
-            this.innerHTML="status OK";
+            //this.innerHTML="status OK";
+            statusButton.style.backgroundImage = "url(" + statusDefualtImage +")";
             status = true;
         } else {
-            this.innerHTML="status NG";
+            //this.innerHTML="status NG";
+            statusButton.style.backgroundImage = "url(" + statusAlertImage +")";
             status = null;
         }
     } , false );
